@@ -1,0 +1,33 @@
+# Theme metadata
+name = "giva"
+
+[light]
+  # Primary
+  primary = "#1A73E8"
+
+  # Menu
+  menu_primary = "#0A2C57"          # Navbar background color
+  menu_text = "#FFFFFF"             # Navbar text color
+  menu_text_active = "#1A73E8"
+  menu_title = "#FFFFFF"
+
+  # Home sections
+  home_section_odd = "#F9F9F9"
+  home_section_even = "#E0E0E0"
+  home_section_background = "#E1F3FF"  # Light blue background for home sections
+
+[dark]
+  # Primary
+  primary = "#8AB4F8"
+
+  # Menu
+  menu_primary = "#0A2C57"          # Navbar background color
+  menu_text = "#FFFFFF"             # Navbar text color
+  menu_text_active = "#8AB4F8"
+  menu_title = "#FFFFFF"
+
+  # Home sections
+  home_section_odd = "#1E1E1E"
+  home_section_even = "#333333"
+  home_section_background = "#E1F3FF"  # Light blue background for home sections
+

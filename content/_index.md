@@ -8,7 +8,7 @@ sections:
   - block: hero
     content:
       image:
-        filename: teste.jpg
+        filename: teste.svg
       title: |
         GIVA LABs
       text: |
