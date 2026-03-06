@@ -208,7 +208,7 @@ main { min-height: calc(100vh - var(--nav-h) - 120px); }
 .person-role { color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; }
 
 /* ---- Person profile ---- */
-.person-profile { padding: 3rem 0; }
+.person-profile { padding: 3rem 2rem; }
 .person-profile-header {
   display: flex;
   gap: 2.5rem;
