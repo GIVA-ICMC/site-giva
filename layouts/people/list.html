@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="container page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{ $groups := slice "Principal Investigators" "Researchers" "Grad Students" "Administration" "Visitors" "Alumni" }}
+  {{ range $groups }}
+    {{ $group := . }}
+    {{ $members := where $.Pages "Params.userGroup" "intersect" (slice $group) }}
+    {{ if $members }}
+    <section class="people-section">
+      <h2>{{ $group }}</h2>
+      <div class="people-grid">
+        {{ range sort $members "Params.last_name" "asc" }}
+        <div class="person-card">
+          <a href="{{ .RelPermalink }}">
+            {{ with .Params.avatar }}
+              <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="person-avatar">
+            {{ else }}
+              <div class="person-avatar-placeholder" aria-hidden="true">
+                {{ with .Params.first_name }}{{ substr . 0 1 | upper }}{{ else }}?{{ end }}
+              </div>
+            {{ end }}
+            <div class="person-name">{{ .Title }}</div>
+            {{ with .Params.role }}<div class="person-role">{{ . }}</div>{{ end }}
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+  {{ end }}
+
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="container page">
+  <article>
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+      <p class="post-meta">
+        {{ .Date | time.Format "January 2, 2006" }}
+        {{ with .Params.tags }}
+          &nbsp;&middot;&nbsp;
+          {{ range . }}
+            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+          {{ end }}
+        {{ end }}
+      </p>
+    </header>
+    {{ with .Params.image }}
+      {{ $img := .filename | default "" }}
+      {{ if $img }}
+        {{ with $.Resources.GetMatch $img }}
+          <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" style="border-radius:6px;margin-bottom:1.5rem;width:100%;max-height:400px;object-fit:cover;">
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+{{ end }}
