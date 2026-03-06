@@ -97,7 +97,7 @@ main { min-height: calc(100vh - var(--nav-h) - 120px); }
 .hero .prose { margin-top: 1.5rem; }
 
 /* ---- Generic page ---- */
-.page { padding: 3rem 0; }
+.page { padding: 3rem 2rem; }
 .page-header { margin-bottom: 2.5rem; }
 .page-header h1 {
   font-size: 2rem;
@@ -264,7 +264,7 @@ main { min-height: calc(100vh - var(--nav-h) - 120px); }
 .education-item { margin-bottom: 0.5rem; font-size: 0.925rem; }
 
 /* ---- Contact ---- */
-.contact-page { padding: 3rem 0; }
+.contact-page { padding: 3rem 2rem; }
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
