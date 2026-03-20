@@ -409,10 +409,10 @@ main { min-height: calc(100vh - var(--nav-h) - 120px); }
     right: 0;
     background: var(--nav-bg);
     flex-direction: column;
-    gap: 0;
-    padding: 0.5rem 1.25rem 1rem;
+    gap: 0.25rem;
+    padding: 0.0rem 1.25rem 1rem;
     box-shadow: var(--shadow-md);
   }
   .nav-toggle:checked ~ .navbar-nav { display: flex; }
-  .nav-link { padding: 0.7rem 0.5rem; opacity: 1; }
+  .nav-link { padding: 0.4rem 0.5rem; opacity: 1;}
 }

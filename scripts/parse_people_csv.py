@@ -27,7 +27,7 @@ OUT_DIR   = REPO_ROOT / "content" / "people"
 LEVEL_MAP: dict[str, tuple[str, str]] = {
     "phd":                      ("Grad Students",  "PhD Candidate"),
     "master's":                 ("Grad Students",  "Master's Student"),
-    "ic (junior researcher)":   ("Grad Students",  "Undergraduate Researcher (IC)"),
+    "ic (junior researcher)":   ("Undergraduate Students",  "Undergraduate Researcher (IC)"),
     "post-doc":                 ("Researchers",    "Postdoctoral Researcher"),
     "direct phd (no master's)": ("Grad Students",  "PhD Candidate"),
 }

@@ -2,7 +2,7 @@
 title: "Clara Ernesto de Carvalho"
 first_name: "Clara"
 last_name: "Ernesto de Carvalho"
-userGroup: ["Grad Students"]
+userGroup: ["Undergraduate Students"]
 role: "Undergraduate Researcher (IC)"
 organizations:
   - name: "ICMC-USP"

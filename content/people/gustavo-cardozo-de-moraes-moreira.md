@@ -2,7 +2,7 @@
 title: "Gustavo Cardozo De Moraes Moreira"
 first_name: "Gustavo"
 last_name: "Cardozo De Moraes Moreira"
-userGroup: ["Grad Students"]
+userGroup: ["Undergraduate Students"]
 role: "Undergraduate Researcher (IC)"
 organizations:
   - name: "ICMC-USP"
