@@ -9,7 +9,7 @@ main:
   #   weight: 10
   - name: People
     url: people
-    weight: 30
+    weight: 10
   - name: Posts
     url: post
     weight: 20
