@@ -29,6 +29,5 @@ education:
   courses:
     - course: "Bachelor Student in Data Science"
       institution: "ICMC-USP"
-# avatar: "/uploads/gustavo-cardozo-de-moraes-moreira.jpg"
 ---
 An undergraduate student of Data Science at ICMC-USP, currently researching the archiving of investigations in Brazil.

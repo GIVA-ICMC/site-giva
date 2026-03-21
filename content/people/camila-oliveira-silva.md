@@ -23,8 +23,5 @@ education:
       institution: "UFMG"
     - course: "Mestranda em Ciências"
       institution: "ICMC - USP no GIVA"
-# avatar: "/uploads/camila-oliveira-silva.jpg"
-# avatar_drive_id: "1qAJk-yGzk8ML_-C8DaZOVBwguE_RVkct"
-# Download: https://drive.google.com/uc?id=1qAJk-yGzk8ML_-C8DaZOVBwguE_RVkct&export=download
-#   then save as: static/uploads/camila-oliveira-silva.jpg
+avatar: "/uploads/camila-oliveira-silva.jpeg"
 ---

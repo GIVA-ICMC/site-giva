@@ -35,9 +35,6 @@ education:
       institution: "ICMC- USP, Brazil"
     - course: "Specialization in Project Management and Direction"
       institution: "UNI, Peru"
-# avatar: "/uploads/liz-maribel-huancapaza-hilasaca.jpg"
-# avatar_drive_id: "13ElAXBBNqcuqTjMujYB9MQUmpWGloJga"
-# Download: https://drive.google.com/uc?id=13ElAXBBNqcuqTjMujYB9MQUmpWGloJga&export=download
-#   then save as: static/uploads/liz-maribel-huancapaza-hilasaca.jpg
+avatar: "/uploads/liz-huancapaza.jpeg"
 ---
 Liz Huancapaza Hilasaca is a PhD student in Computer Science at the Institute of Mathematical and Computer Sciences of the University of São Paulo (USP), Brazil. She is involved in research related to computer science. Her academic work often focuses on areas like artificial intelligence, machine learning, soundscape analytics or related computational fields.

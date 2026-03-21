@@ -12,4 +12,5 @@ interests:
   - "Visual Analytics"
   - "Complex Networks"
   - "Data Streams"
+avatar: "/uploads/jean-roberto-ponciano.jpeg"
 ---

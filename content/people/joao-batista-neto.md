@@ -9,4 +9,6 @@ organizations:
     url: "https://www.icmc.usp.br/"
 interests:
   - "Processamento de Imagens"
+
+avatar: "https://sites.icmc.usp.br/jbatista/img/Foto_3.gif"
 ---

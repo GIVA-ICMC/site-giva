@@ -30,9 +30,6 @@ education:
       institution: "UFRN"
     - course: "Graduação em Ciências da Computação"
       institution: "UFRN"
-# avatar: "/uploads/italo-epifanio-de-lima-e-silva.jpg"
-# avatar_drive_id: "1MiqxTiPyOMtodspAoEawkmUMX2pDlEpY"
-# Download: https://drive.google.com/uc?id=1MiqxTiPyOMtodspAoEawkmUMX2pDlEpY&export=download
-#   then save as: static/uploads/italo-epifanio-de-lima-e-silva.jpg
+avatar: "/uploads/italo-epifanio-de-lima-e-silva.jpg"
 ---
 An AI/ML Platform Engineer and Master's Researcher. In my current research, I am exploring the intersection of Artificial Intelligence and Soundscape Ecology for biodiversity monitoring. Professionally, I build Machine Learning tools for predictive maintenance at Shape Digital.

@@ -18,9 +18,6 @@ education:
       institution: "ICMC-USP"
     - course: "Mestrando"
       institution: "GIVA"
-# avatar: "/uploads/arthur-kenji-kakuta.jpg"
-# avatar_drive_id: "1jG2hp_3p6cgy9R7RrEb9kRNyQkPCl-Bf"
-# Download: https://drive.google.com/uc?id=1jG2hp_3p6cgy9R7RrEb9kRNyQkPCl-Bf&export=download
-#   then save as: static/uploads/arthur-kenji-kakuta.jpg
+avatar: "/uploads/arthur-kenji-kakuta.jpg"
 ---
 A mathematician and a master's student in data visualization, seeking knowledge and improvements.

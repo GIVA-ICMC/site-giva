@@ -25,9 +25,6 @@ education:
   courses:
     - course: "Graduanda em Ciência da Computação"
       institution: "ICMC"
-# avatar: "/uploads/clara-ernesto-de-carvalho.jpg"
-# avatar_drive_id: "1rTU7XZjq5VuF05sj65c0PlqYqTRO8IS3"
-# Download: https://drive.google.com/uc?id=1rTU7XZjq5VuF05sj65c0PlqYqTRO8IS3&export=download
-#   then save as: static/uploads/clara-ernesto-de-carvalho.jpg
+avatar: "/uploads/clara-ernesto-de-carvalho.jpg"
 ---
 A Student of Computer Science at USP-ICMC, currently researching in Computer Vision and Domain Generalization. Very passionate about AI, Computer Vision and Computer Graphics

@@ -25,9 +25,6 @@ education:
       institution: "IFSP"
     - course: "Bacharelado em Ciências da Computação"
       institution: "IFSP"
-# avatar: "/uploads/raissa-rosa-dos-santos-januario.jpg"
-# avatar_drive_id: "1KtfjFaN53QdWW170AMKOGbbFXLZMkFq4"
-# Download: https://drive.google.com/uc?id=1KtfjFaN53QdWW170AMKOGbbFXLZMkFq4&export=download
-#   then save as: static/uploads/raissa-rosa-dos-santos-januario.jpg
+avatar: "/uploads/raissa-rosa-dos-santos-januario.jpg"
 ---
 A Computer Science graduate from IFSP and currently a master's student in Computer Science at ICMC-USP. Working on crime analysis using graphs as a spatial discretization of road networks, applying statistical techniques and deep learning methods designed for graph-based data.

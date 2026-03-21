@@ -12,4 +12,5 @@ interests:
   - "Nonlinear dynamics"
   - "Machine Learning"
   - "Data Visualization"
+avatar: "/uploads/thomas-peron.jpeg"
 ---

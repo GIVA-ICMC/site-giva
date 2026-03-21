@@ -27,9 +27,6 @@ education:
       institution: "IFSC-USP"
     - course: "Mestrando em Ciência da Computação e Matemática Computacional"
       institution: "ICMC-USP no GIVA"
-# avatar: "/uploads/marvin-mendes-cabral.jpg"
-# avatar_drive_id: "1Bg2EGmDmXrxsAJ51zSM3IXbO32RC00vk"
-# Download: https://drive.google.com/uc?id=1Bg2EGmDmXrxsAJ51zSM3IXbO32RC00vk&export=download
-#   then save as: static/uploads/marvin-mendes-cabral.jpg
+avatar: "/uploads/marvin-mendes-cabral.jpg"
 ---
 A Masters student at University of São Paulo, researching in the Large Language Models field, specially in the visualization area. Passionate about science in general and great admire for physics, computation and mathematics.
