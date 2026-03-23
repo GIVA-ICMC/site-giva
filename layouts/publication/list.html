@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <ul class="pub-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <li class="pub-item">
+      {{ with .Params.publication_types }}
+        <span class="pub-type">{{ index . 0 | humanize }}</span>
+      {{ end }}
+      <h2 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.authors }}
+        <p class="pub-authors">{{ delimit . ", " }}</p>
+      {{ end }}
+      {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+      <div class="pub-links">
+        {{ with .Params.url_pdf }}<a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{{ end }}
+        {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="pub-link" target="_blank" rel="noopener">DOI</a>{{ end }}
+        {{ with .Params.url_code }}<a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">Code</a>{{ end }}
+        {{ with .Params.url_dataset }}<a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">Data</a>{{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

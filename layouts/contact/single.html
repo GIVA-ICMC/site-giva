@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="container contact-page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="contact-layout">
+    <div class="contact-info">
+      <p class="contact-info-title">Get in touch</p>
+
+      {{ with .Params.address }}
+      <div class="contact-item">
+        <span class="contact-label">Address</span>
+        <address>
+          {{ .street }}<br>
+          {{ .city }}{{ with .region }}, {{ . }}{{ end }} {{ .postcode }}<br>
+          {{ .country }}
+        </address>
+      </div>
+      {{ end }}
+
+      {{ with .Params.phone }}
+      <div class="contact-item">
+        <span class="contact-label">Phone</span>
+        <span>{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{ with .Params.email }}
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:{{ . }}">{{ . }}</a>
+      </div>
+      {{ end }}
+
+      {{ with .Params.office_hours }}
+      <div class="contact-item">
+        <span class="contact-label">Hours</span>
+        <div>{{ range . }}<p>{{ . }}</p>{{ end }}</div>
+      </div>
+      {{ end }}
+
+      {{ with .Params.directions }}
+      <div class="contact-item">
+        <span class="contact-label">Directions</span>
+        <p>{{ . }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+    {{ with .Params.coordinates }}
+    {{ $lat := .latitude | float }}
+    {{ $lon := .longitude | float }}
+    {{ $delta := 0.006 }}
+    {{ $w := printf "%.6f" (math.Sub $lon $delta) }}
+    {{ $s := printf "%.6f" (math.Sub $lat $delta) }}
+    {{ $e := printf "%.6f" (math.Add $lon $delta) }}
+    {{ $n := printf "%.6f" (math.Add $lat $delta) }}
+    {{ $src := printf "https://www.openstreetmap.org/export/embed.html?bbox=%s%%2C%s%%2C%s%%2C%s&layer=mapnik&marker=%s%%2C%s" $w $s $e $n (printf "%.6f" $lat) (printf "%.6f" $lon) }}
+    <div class="contact-map">
+      <iframe
+        src="{{ $src }}"
+        title="Location map"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ with .Content }}<div class="prose" style="margin-top:2rem">{{ . }}</div>{{ end }}
+</div>
+{{ end }}

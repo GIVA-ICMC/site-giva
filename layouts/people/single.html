@@ -1,0 +1,66 @@
+{{ define "main" }}
+{{ $iconLabels := dict
+  "envelope"       "Email"
+  "twitter"        "Twitter"
+  "google-scholar" "Google Scholar"
+  "github"         "GitHub"
+  "linkedin"       "LinkedIn"
+  "orcid"          "ORCID"
+  "researchgate"   "ResearchGate"
+  "youtube"        "YouTube"
+  "instagram"      "Instagram"
+  "facebook"       "Facebook"
+}}
+<div class="container person-profile">
+  <div class="person-profile-header">
+    {{ with .Params.avatar }}
+      <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="person-profile-avatar">
+    {{ else }}
+      <div class="person-profile-avatar-placeholder" aria-hidden="true">
+        {{ with .Params.first_name }}{{ substr . 0 1 | upper }}{{ else }}?{{ end }}
+      </div>
+    {{ end }}
+
+    <div class="person-profile-info">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.role }}<p class="person-profile-role">{{ . }}</p>{{ end }}
+      {{ range .Params.organizations }}
+        <p class="person-profile-role">
+          {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+        </p>
+      {{ end }}
+      {{ with .Params.social }}
+      <div class="person-social">
+        {{ range . }}
+          {{ $label := index $iconLabels .icon | default (.icon | humanize) }}
+          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ $label }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="person-profile-bio">
+    {{ with .Params.interests }}
+    <p class="section-label">Interests</p>
+    <ul class="interests-list">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{ end }}
+
+    {{ with .Params.education }}
+    <p class="section-label">Education</p>
+    {{ range .courses }}
+    <p class="education-item">
+      <strong>{{ .course }}</strong> &mdash; {{ .institution }}{{ with .year }}, {{ . }}{{ end }}
+    </p>
+    {{ end }}
+    {{ end }}
+
+    {{ with .Content }}
+    <p class="section-label">Biography</p>
+    <div class="prose">{{ . }}</div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
