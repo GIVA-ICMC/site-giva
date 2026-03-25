@@ -10,4 +10,5 @@ organizations:
 interests:
   - "Computer Vision"
   - "Few-shot Learning"
+avatar: "uploads/leo-sampaio-ferraz-ribeiro.jpg"
 ---

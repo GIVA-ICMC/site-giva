@@ -10,5 +10,5 @@ organizations:
 interests:
   - "Processamento de Imagens"
 
-avatar: "https://sites.icmc.usp.br/jbatista/img/Foto_3.gif"
+avatar: "/uploads/joao-batista-neto.gif"
 ---
