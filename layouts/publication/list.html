@@ -11,8 +11,20 @@
       {{ end }}
       <h2 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       {{ with .Params.authors }}
-        <p class="pub-authors">{{ delimit . ", " }}</p>
-      {{ end }}
+      <p class="pub-authors">
+        {{ $authors := slice }}
+        {{ range . }}
+          {{ $person := $.Site.GetPage (printf "/people/%s" .) }}
+          {{ if $person }}
+            {{ $link := printf "<a href=\"%s\">%s</a>" $person.RelPermalink $person.Title }}
+            {{ $authors = $authors | append $link }}
+          {{ else }}
+            {{ $authors = $authors | append . }}
+          {{ end }}
+        {{ end }}
+        {{ delimit $authors ", " | safeHTML }}
+      </p>
+    {{ end }}
       {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
       <div class="pub-links">
         {{ with .Params.url_pdf }}<a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{{ end }}
