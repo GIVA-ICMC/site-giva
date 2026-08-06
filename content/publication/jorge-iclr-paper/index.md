@@ -75,3 +75,18 @@ Create your slides in Markdown - click the *Slides* button to check out the exam
 {{% /callout %}}
 
 Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+
+
+```mermaid
+graph TD;
+  A[Start] --> B{Decision};
+  B -- Yes --> C[Great];
+  B -- No --> D[Try Again];
+```
+
+
+{{< chart data="my-chart" >}}
