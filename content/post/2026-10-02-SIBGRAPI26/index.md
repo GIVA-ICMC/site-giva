@@ -8,4 +8,4 @@ image:
 
 GIVA students were recognized at SIBGRAPI 2026, the Conference on Graphics, Patterns and Images.
 
-Priscylla Maria (right) won the Best PhD Thesis award, and Karelia Alexandra Vilca Salinas (left) received an honorable mention in the PhD thesis awards. Vitor Pereira Matias (center) won the Best Master's Dissertation award.
+Priscylla Maria (right) won the Best PhD Thesis award, and Karelia Alexandra Vilca Salinas (left) received an honorable mention in the PhD thesis awards. [Vitor Pereira Matias](/people/vitor-pereira-matias/) (center) won the Best Master's Dissertation award.
