@@ -43,6 +43,18 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        patterns:
+          inline:
+            - '\('
+            - '\)'
+            - '$'
+          block:
+            - '\['
+            - '\]'
+            - '$$'
   highlight:
     noClasses: false
 related:

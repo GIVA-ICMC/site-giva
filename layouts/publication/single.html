@@ -2,11 +2,23 @@
 <div class="container page">
   <header class="page-header">
     {{ with .Params.publication_types }}
-      <span class="pub-type">{{ index . 0 | humanize }}</span>
+      <span class="pub-type">{{ index . 0 | humanize }}</span><br>
     {{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Params.authors }}
-      <p class="pub-authors">{{ delimit . ", " }}</p>
+      <p class="pub-authors">
+        {{ $authors := slice }}
+        {{ range . }}
+          {{ $person := $.Site.GetPage (printf "/people/%s" .) }}
+          {{ if $person }}
+            {{ $link := printf "<a href=\"%s\">%s</a>" $person.RelPermalink $person.Title }}
+            {{ $authors = $authors | append $link }}
+          {{ else }}
+            {{ $authors = $authors | append . }}
+          {{ end }}
+        {{ end }}
+        {{ delimit $authors ", " | safeHTML }}
+      </p>
     {{ end }}
     {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
     <p class="post-meta">{{ .Date | time.Format "2006" }}</p>
@@ -22,6 +34,19 @@
       {{ with .Params.url_source }}<a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">Source</a>{{ end }}
     </div>
   </header>
+
+  {{/* --- FEATURED IMAGE BLOCK --- */}}
+  {{ $image := .Resources.GetMatch "featured*" }}
+  {{ if $image }}
+    <div class="pub-featured-image" style="margin: 1.5rem 0;">
+      <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" style="max-width: 100%; height: auto; border-radius: 6px;">
+      {{ with .Params.image.caption }}
+        <p class="image-caption" style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; text-align: center;">
+          {{ . | markdownify }}
+        </p>
+      {{ end }}
+    </div>
+  {{ end }}
 
   {{ with .Params.abstract }}
   <div class="pub-abstract">

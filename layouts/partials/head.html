@@ -10,3 +10,49 @@
 {{ range .AlternativeOutputFormats -}}
 {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
+
+<!-- 1. KaTeX (LaTeX Math Rendering) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+
+<!-- 2. Mermaid (Diagram Rendering) -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      /* Canvas */
+      background: 'transparent',
+      mainBkg: 'transparent',
+
+      /* Lines & Arrows */
+      lineColor: '#334155',           /* Dark slate lines (Slate-700) */
+      arrowheadColor: '#1e293b',      /* Deep slate arrowheads (Slate-800) */
+      
+      /* Edge/Arrow Labels */
+      textColor: '#0f172a',           /* High-contrast label text */
+      edgeLabelBackground: '#f1f5f9', /* Light pill background under arrow text */
+
+      /* Default Node Styling */
+      nodeBkg: '#ffffff',             /* Clean white node background */
+      nodeBorder: '#cbd5e1',          /* Subtle slate border */
+      nodeTextColor: '#0f172a',       /* Dark slate node text */
+
+      /* Subgraphs & Clusters */
+      clusterBkg: 'rgba(241, 245, 249, 0.5)',
+      clusterBorder: '#94a3b8',
+
+      /* Typography */
+      fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
+      fontSize: '14px'
+    }
+  });
+</script>
+
+
+
+<!-- 3. Plotly (Interactive Plots) -->
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
