@@ -1,0 +1,49 @@
+{
+  "source": "Google Scholar",
+  "retrieved": "2026-10-05",
+  "years": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "series": [
+    {
+      "id": "maria-oliveira",
+      "name": "Maria Oliveira",
+      "color": "#0a2c57",
+      "values": [239, 184, 224, 237, 211, 230, 224, 248, 199, 281, 260, 287, 230, 284, 198]
+    },
+    {
+      "id": "moacir-ponti",
+      "name": "Moacir Ponti",
+      "color": "#1a73e8",
+      "values": [13, 29, 21, 36, 61, 108, 156, 225, 323, 409, 549, 569, 732, 712, 437]
+    },
+    {
+      "id": "thomas-peron",
+      "name": "Thomas Peron",
+      "color": "#0f766e",
+      "values": [null, 34, 60, 90, 173, 167, 184, 198, 236, 261, 224, 291, 261, 293, 261]
+    },
+    {
+      "id": "leo-ribeiro",
+      "name": "Leo Ribeiro",
+      "color": "#7c3aed",
+      "values": [null, null, null, null, null, 13, 35, 63, 81, 127, 130, 124, 122, 117, 73]
+    },
+    {
+      "id": "lucas-valem",
+      "name": "Lucas Valem",
+      "color": "#ea580c",
+      "values": [null, null, null, null, null, 12, 4, 22, 21, 40, 43, 107, 181, 147, 106]
+    },
+    {
+      "id": "joao-neto",
+      "name": "João Neto",
+      "color": "#db2777",
+      "values": [10, 5, 9, 10, 12, 21, 18, 29, 27, 42, 26, 47, 31, 35, 29]
+    },
+    {
+      "id": "jean-ponciano",
+      "name": "Jean Ponciano",
+      "color": "#65a30d",
+      "values": [null, null, null, null, null, null, null, 3, 11, 37, 45, 40, 50, 66, 50]
+    }
+  ]
+}
