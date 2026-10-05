@@ -1,7 +1,20 @@
-# IDEs
+# IDEs and local agent folders
 .idea/
+.vscode/
+.cursor/
+.claude/
+.hugo_build.lock
 
 # Hugo
 /resources/
 public/
 assets/jsconfig.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Form exports (spreadsheets, uploaded photos); scripts in this folder stay tracked
+forms_responses/*
+!forms_responses/*.py
+!forms_responses/requirements.txt

@@ -13,17 +13,29 @@
         {{ end }}
       </p>
     </header>
+    <div class="prose">
+      {{ .Content }}
+    </div>
     {{ with .Params.image }}
       {{ $img := .filename | default "" }}
       {{ if $img }}
         {{ with $.Resources.GetMatch $img }}
-          <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" style="border-radius:6px;margin-bottom:1.5rem;width:100%;max-height:400px;object-fit:cover;">
+          <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" class="post-body-image">
         {{ end }}
       {{ end }}
     {{ end }}
-    <div class="prose">
-      {{ .Content }}
+    {{ with .Params.publications }}
+    <div class="related-pubs">
+      <p class="abstract-label">Related publication</p>
+      <ul>
+        {{ range . }}
+          {{ with site.GetPage (printf "/publication/%s" .) }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        {{ end }}
+      </ul>
     </div>
+    {{ end }}
   </article>
 </div>
 {{ end }}
