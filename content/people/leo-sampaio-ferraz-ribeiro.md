@@ -7,6 +7,9 @@ role: "Professor"
 organizations:
   - name: "ICMC-USP"
     url: "https://www.icmc.usp.br/"
+social:
+  - icon: "google-scholar"
+    link: "https://scholar.google.com/citations?user=vunj2dMAAAAJ"
 interests:
   - "Computer Vision"
   - "Few-shot Learning"

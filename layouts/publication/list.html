@@ -1,8 +1,20 @@
 {{ define "main" }}
 <div class="container page">
-  <header class="page-header">
-    <h1>{{ .Title }}</h1>
-  </header>
+  <div class="pub-page-banner">
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ with site.Data.scholar_citations }}
+    <div class="citations-chart-wrap">
+      <p class="citations-chart-label">Faculty citations per year</p>
+      <p class="citations-chart-note">Google Scholar · sum of all professors</p>
+      <div id="citations-year-chart" class="citations-chart"></div>
+      <script type="application/json" id="citations-year-data">{{ jsonify . | safeHTML }}</script>
+    </div>
+    {{ $js := resources.Get "js/citations-chart.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+    {{ end }}
+  </div>
   <ul class="pub-list">
     {{ range .Pages.ByDate.Reverse }}
     <li class="pub-item">

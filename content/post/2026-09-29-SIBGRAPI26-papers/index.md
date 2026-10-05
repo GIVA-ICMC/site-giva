@@ -9,13 +9,13 @@ GIVA will present two tutorials and nine papers at [SIBGRAPI](https://sibgrapi.s
 Tutorials:
 
 - **An overview of 3D Vision-Language Models**, [Márcus Costa](/people/marcus-vinicius-lobo-costa/), [Vitor Matias](/people/vitor-pereira-matias/), Afonso Paiva, Jeová Farias, Tiago Novello, and [Moacir Ponti](/people/moacir-antonelli-ponti/)
-- **An Introduction to Graph Neural Networks in Computer Vision: A Practical Perspective**, Bárbara Caroline Benato, [Lucas Valem](/people/lucas-pascotti-valem/), Gabriel Maia Brito, Ian de Holanda Cavalcanti Bezerra, Rafael Mendonça Duarte, and Luis Gustavo Nonato
+- **[An Introduction to Graph Neural Networks in Computer Vision: A Practical Perspective](/publication/gnns-computer-vision-practical-perspective/)**, Bárbara Caroline Benato, [Lucas Valem](/people/lucas-pascotti-valem/), Gabriel Maia Brito, Ian de Holanda Cavalcanti Bezerra, Rafael Mendonça Duarte, and Luis Gustavo Nonato
 
 Papers:
 
-- **Region-Aware CLS Token Augmentation for Fine-Grained Image Retrieval**, Ian de Holanda Cavalcanti Bezerra, Vivek Trivedy, Lucas Valem, and Longin Jan Latecki
-- **Rank Correlation Meets Gaussian Degree Normalization in GNNs for Image Classification**, Rafael Mendonça Duarte, Gabriel Maia Brito, and Lucas Valem
-- **Rethinking Image Graphs for GCNs: Beyond Similarity with Diversity**, Diego Giaretta de Paulo and Lucas Valem
+- **[Region-Aware CLS Token Augmentation for Fine-Grained Image Retrieval](/publication/region-aware-cls-token-augmentation/)**, Ian de Holanda Cavalcanti Bezerra, Vivek Trivedy, [Lucas Valem](/people/lucas-pascotti-valem/), and Longin Jan Latecki
+- **[Rank Correlation Meets Gaussian Degree Normalization in GNNs for Image Classification](/publication/rank-correlation-gaussian-degree-gnns/)**, Rafael Mendonça Duarte, Gabriel Maia Brito, and [Lucas Valem](/people/lucas-pascotti-valem/)
+- **[Rethinking Image Graphs for GCNs: Beyond Similarity with Diversity](/publication/rethinking-image-graphs-gcns/)**, Diego Giaretta de Paulo and [Lucas Valem](/people/lucas-pascotti-valem/)
 - **ViTs Meet Contrastive Learning for Enhanced Multi-view 3D Shape Features**, Márcus Costa, Sherlon A. da Silva, Bárbara C. Benato, [Leo Ribeiro](/people/leo-sampaio-ferraz-ribeiro/), and Moacir Ponti
 - **Dataset and Benchmark for Skin Tone Classification in the Wild using the MST Scale**, [Vitor Pereira Matias](/people/vitor-pereira-matias/) and [João Batista Neto](/people/joao-batista-neto/)
 - **Revisiting Temporality for Sketch Representation Learning**, Marcelo Isaias de Moraes Junior and Moacir Ponti
