@@ -1,15 +1,23 @@
 {{ define "main" }}
 <section class="hero">
-  <div class="container">
-    {{ with .Params.heroImage }}
-      {{ $img := resources.Get (printf "media/%s" .) }}
-      {{ if $img }}
-        <img src="{{ $img.RelPermalink }}" alt="{{ $.Site.Title }}" class="hero-logo">
+  <div class="container hero-split">
+    <div class="hero-brand">
+      {{ with .Params.heroImage }}
+        {{ $img := resources.Get (printf "media/%s" .) }}
+        {{ if $img }}
+          <img src="{{ $img.RelPermalink }}" alt="{{ $.Site.Title }}" class="hero-logo">
+        {{ end }}
       {{ end }}
-    {{ end }}
-    <h1>{{ .Site.Title }}</h1>
-    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+      <h1>{{ .Site.Title }}</h1>
+      {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+      {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    </div>
+    <div class="hero-about" id="about">
+      <h2>About</h2>
+      {{ with .Params.about }}
+      <p class="about-intro">{{ . }}</p>
+      {{ end }}
+    </div>
   </div>
 </section>
 
@@ -21,13 +29,8 @@
       {{ $posts := where .Site.RegularPages "Section" "post" }}
       {{ range first 6 $posts }}
         <article class="post-card">
-          {{/* Fetch featured image from the page bundle */}}
           {{ $image := .Resources.GetMatch "featured*" }}
-          {{ if $image }}
-            <a href="{{ .RelPermalink }}" class="post-card-image">
-              <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
-            </a>
-          {{ end }}
+          {{ if not $image }}{{ $image = .Resources.GetMatch "image*" }}{{ end }}
 
           <div class="post-card-content">
             <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-date">
@@ -36,8 +39,18 @@
             <h3 class="post-title">
               <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </h3>
-            <p class="post-summary">{{ .Summary }}</p>
+            {{ if not $image }}
+            <p class="post-summary">
+              {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 220 }}{{ end }}
+            </p>
+            {{ end }}
           </div>
+
+          {{ if $image }}
+            <a href="{{ .RelPermalink }}" class="post-card-image">
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
+            </a>
+          {{ end }}
         </article>
       {{ else }}
         <p>No posts published yet.</p>

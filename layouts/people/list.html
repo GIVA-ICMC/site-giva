@@ -12,7 +12,23 @@
     <section class="people-section">
       <h2>{{ $group }}</h2>
       <div class="people-grid">
-        {{ range sort $members "Params.last_name" "asc" }}
+        {{ $ordered := slice }}
+        {{ if eq $group "Grad Students" }}
+          {{ range sort (where $members "Params.role" "PhD Candidate") "Title" "asc" }}
+            {{ $ordered = $ordered | append . }}
+          {{ end }}
+          {{ range sort (where $members "Params.role" "Master's Student") "Title" "asc" }}
+            {{ $ordered = $ordered | append . }}
+          {{ end }}
+          {{ range sort $members "Title" "asc" }}
+            {{ if and (ne .Params.role "PhD Candidate") (ne .Params.role "Master's Student") }}
+              {{ $ordered = $ordered | append . }}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ $ordered = sort $members "Params.last_name" "asc" }}
+        {{ end }}
+        {{ range $ordered }}
         <div class="person-card">
           <a href="{{ .RelPermalink }}">
             {{ with .Params.avatar }}

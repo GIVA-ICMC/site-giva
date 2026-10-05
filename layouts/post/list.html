@@ -4,11 +4,15 @@
     <h1>{{ .Title }}</h1>
   </header>
   <ul class="post-list">
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range .RegularPages.ByDate.Reverse }}
     <li class="post-item">
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <p class="post-meta">{{ .Date | time.Format "January 2, 2006" }}</p>
-      {{ with .Summary }}<p class="post-excerpt">{{ . }}</p>{{ end }}
+      {{ $excerpt := "" }}
+      {{ with .Params.summary }}{{ $excerpt = . }}{{ end }}
+      {{ if not $excerpt }}{{ with .Description }}{{ $excerpt = . }}{{ end }}{{ end }}
+      {{ if not $excerpt }}{{ $excerpt = .Plain | truncate 220 }}{{ end }}
+      {{ if $excerpt }}<p class="post-excerpt">{{ $excerpt }}</p>{{ end }}
     </li>
     {{ end }}
   </ul>
